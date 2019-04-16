@@ -24,7 +24,7 @@ body{
 .plateau{
     width : 48vw;
     height: 33.6vw;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: absolute;
     top: 53%;
     left: 50%;
