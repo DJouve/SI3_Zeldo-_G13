@@ -1,25 +1,42 @@
 body{
-    background-color: #222
+    background-color: #222;
+    overflow: hidden;
+    height: 100%;
 }
 
-.player{
-    width: 10px;
-    height: 10px;
-    background: red;
 
+
+.container{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 4%;
+    position: relative;
 }
 .game{
     margin: 0 auto;
-    width: 950px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     border: 2px solid #BADA55;
-    padding: 50px;
     background-color: white;
     margin-top : 20px;
 }
 .plateau{
-    margin: 0 auto;
-    width : 900px;
-    height: 600px;
+    width : 78%;
+    height: 69%;
     border: 2px solid red;
+    position: absolute;
+    top: 16%;
+    left: 11%;
+}
+.player{
+    width: 32px;
+    height: 32px;
+    background: red;
+    position: absolute;
+}
+.plateau img{
+    width: 900px;
+    height: 600px;
+    background-size: cover;
 }
