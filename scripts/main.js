@@ -1,6 +1,6 @@
 let container = document.querySelector(".plateau")
 let player = document.querySelector(".player")
-
+let plateau = document.querySelector(".plateau")
 let playerLeft = 0
 let playerTop = 0
 let step = 10
@@ -23,14 +23,18 @@ function animate(e){
     if(e.keyCode == 39){
         playerLeft += step
         player.style.left = playerLeft + 'px'
-        if(playerLeft >= plateHeight){
+        if(playerLeft >= plateau.style.width){
             playerLeft -= 2
+            player.style.left = playerLeft +'px'
         }
     }
 
     if(e.keyCode == 37){
         playerLeft -= step
         player.style.left = playerLeft + 'px'
+        if (playerLeft <= 0) {
+            playerLeft += 2
+        }
     }
 
     if(e.keyCode == 38){
