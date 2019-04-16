@@ -7,15 +7,15 @@ let step = 10
 document.onkeydown = animate
 function animate(e){
     // switch(e.keyCode){
-    //     case 38 : 
+    //     case 38 :
     //         playerTop -= step
     //         player.style.top = playerTop + 'px'
-    //     case 40 : 
+    //     case 40 :
     //         playerTop += step
     //         player.style.top = playerTop + 'px'
-    //     case 37 : 
+    //     case 37 :
     //         playerLeft -= step
-    //         player.style.left = playerLeft + 'px'   
+    //         player.style.left = playerLeft + 'px'
     //     case 39 :
     //         playerLeft += step
     //         player.style.left = playerLeft + 'px'
@@ -23,6 +23,9 @@ function animate(e){
     if(e.keyCode == 39){
         playerLeft += step
         player.style.left = playerLeft + 'px'
+        if(playerLeft >= plateHeight){
+            playerLeft -= 2
+        }
     }
 
     if(e.keyCode == 37){
