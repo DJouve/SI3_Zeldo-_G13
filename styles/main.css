@@ -17,7 +17,6 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    border: 2px solid #BADA55;
     background-color: white;
     margin-top : 20px;
 }
@@ -31,10 +30,12 @@ body{
     transform: translate(-50%,-50%);
 }
 .player{
-    width: 2.4vw;
-    height: 2.4vw;
-    background: red;
+    width: 3.8vw;
+    height: 3.8vw;
     position: absolute;
+    background-image: url("../images/backw0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .plateau img{
     width: 900px;
