@@ -1,0 +1,25 @@
+body{
+    background-color: #222
+}
+
+.player{
+    width: 10px;
+    height: 10px;
+    background: red;
+
+}
+.game{
+    margin: 0 auto;
+    width: 950px;
+    height: 600px;
+    border: 2px solid #BADA55;
+    padding: 50px;
+    background-color: white;
+    margin-top : 20px;
+}
+.plateau{
+    margin: 0 auto;
+    width : 900px;
+    height: 600px;
+    border: 2px solid red;
+}
