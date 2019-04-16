@@ -1,9 +1,10 @@
-let container = document.querySelector(".plateau")
+let container = document.querySelector(".container")
 let player = document.querySelector(".player")
 let plateau = document.querySelector(".plateau")
 let playerLeft = 0
 let playerTop = 0
-let step = 10
+let step = 2.4
+
 document.onkeydown = animate
 function animate(e){
     // switch(e.keyCode){
@@ -21,29 +22,30 @@ function animate(e){
     //         player.style.left = playerLeft + 'px'
     // }
     if(e.keyCode == 39){
-        playerLeft += step
-        player.style.left = playerLeft + 'px'
-        if(playerLeft >= plateau.style.width){
-            playerLeft -= 2
-            player.style.left = playerLeft +'px'
+        if(playerLeft + step < 48){
+            playerLeft += step
+            player.style.left = playerLeft + 'vw'
         }
     }
 
     if(e.keyCode == 37){
-        playerLeft -= step
-        player.style.left = playerLeft + 'px'
-        if (playerLeft <= 0) {
-            playerLeft += 2
+        if(playerLeft >= 0) {
+            playerLeft -= step
+            player.style.left = playerLeft + 'vw'
         }
     }
 
     if(e.keyCode == 38){
-        playerTop -= step
-        player.style.top = playerTop + 'px'
+        if (playerTop >= 0) {
+            playerTop -= step
+            player.style.top = playerTop + 'vw'
+        }
     }
 
     if(e.keyCode == 40){
-        playerTop += step
-        player.style.top = playerTop + 'px'
+        if(playerTop + step < 35){
+            playerTop += step
+            player.style.top = playerTop + 'vw'
+        }
     }
 }
