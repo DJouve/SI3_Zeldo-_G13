@@ -1,44 +1,52 @@
-let container = document.querySelector(".plateau")
+let container = document.querySelector(".container")
 let player = document.querySelector(".player")
 let plateau = document.querySelector(".plateau")
+let playerLeft = 23
+let playerTop = 32
+let step = 2.1
 
-let playerLeft = 0
-let playerTop = 0
-let step = 10
 document.onkeydown = animate
 function animate(e){
     // switch(e.keyCode){
-    //     case 38 : 
+    //     case 38 :
     //         playerTop -= step
     //         player.style.top = playerTop + 'px'
-    //     case 40 : 
+    //     case 40 :
     //         playerTop += step
     //         player.style.top = playerTop + 'px'
-    //     case 37 : 
+    //     case 37 :
     //         playerLeft -= step
-    //         player.style.left = playerLeft + 'px'   
+    //         player.style.left = playerLeft + 'px'
     //     case 39 :
     //         playerLeft += step
     //         player.style.left = playerLeft + 'px'
     // }
     if(e.keyCode == 39){
-        playerLeft += step
-        player.style.left = playerLeft + 'px'
+        if(playerLeft + step < 47){
+            playerLeft += step
+            player.style.left = playerLeft + 'vw'
+        }
     }
 
     if(e.keyCode == 37){
-        playerLeft -= step
-        player.style.left = playerLeft + 'px'
+        if(playerLeft > 0) {
+            playerLeft -= step
+            player.style.left = playerLeft + 'vw'
+        }
     }
 
     if(e.keyCode == 38){
-        playerTop -= step
-        player.style.top = playerTop + 'px'
+        if (playerTop > 0) {
+            playerTop -= step
+            player.style.top = playerTop + 'vw'
+        }
     }
 
     if(e.keyCode == 40){
-        playerTop += step
-        player.style.top = playerTop + 'px'
+        if(playerTop + step < 33){
+            playerTop += step
+            player.style.top = playerTop + 'vw'
+        }
     }
 }
 
