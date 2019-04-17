@@ -15,7 +15,7 @@ let isAttackingTop = false
 let isAttackingRight = false
 let isAttackingDown = false
 let isAttackingLeft = false
-
+let stunned = false
 
 
 function morphStill(){
@@ -104,8 +104,10 @@ function animate(e){
         }
     }
     if(e.keyCode == 69){
-        player.style.backgroundImage = "url('images/pride.png')"
-        player.style.height = 12 + "vw"
+        /*player.style.backgroundImage = "url('images/pride.png')"
+        player.style.height = 12 + "vw"*/
+        player.style.backgroundImage = "url('images/stunned.png')"
+
     }
     if((e.keyCode == 32) && (faceSide == true)){
         player.style.height = 3.8 + "vw"
@@ -165,4 +167,12 @@ function animate(e){
             isAttackingLeft = false
         }
     }
+    if(stunned == true){
+        for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
+            setTimeout(function() {
+                player.style.backgroundImage = "url('images/stunned.png')"
+                player.style.height = player.style.height + fightSprite + "vw"
+            }, 120 *  fightSprite)
+    }
+}
 }
