@@ -201,20 +201,20 @@ class Monster { // La class pour faire les monstres
         plateau.appendChild(this.monster)
         spawn(monster)
     }
-    spawn(monster){ // Fonction pour faire spawn les monstres à une des 3 portes. Ca fonctionne pas 
+    spawn(monster){ // Fonction pour faire spawn les monstres à une des 3 portes. Ca fonctionne pas
         let spawn = Math.floor(math.random()*4)
         if (spawn = 0){
             div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
         }
         if (spawn = 1){
-            div.style.top = 2 + "vw"    
+            div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
         }
         if (spawn = 2){
             div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
-        }       
+        }
     }
 }
 
@@ -225,8 +225,7 @@ let boss = new Monster("boss", 100, 2, 5 + "vw", 5 + "vw", 25, 0, 0, 2, 3 + "vw"
 let coffre = new Monster ("coffre", 1, 2, 4 + "vw", 2 + "vw", 0, 0, 0, 0, 0, 1)
 
 
-
-function init(){ // les fonctions du début de jeu
+ function init(){ // les fonctions du début de jeu
     reset ()
     game1 ()
 }
@@ -246,7 +245,7 @@ function reset(){ // Fonction qui va reset l'espace du jeu
     playerTop = 32
     player.style.top = playerTop + 'vw'
     player.style.left = playerLeft + 'vw'
-    
+
 
 
 }
@@ -275,7 +274,7 @@ function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
 }
 
 function game2 (){// Fonction du niveau 2
-    
+
     let compte = 0
     do {
         for (i=0; i<1; i++){
@@ -327,5 +326,3 @@ function endgame(){
         // IL faut créer une div avec le texte de quand on gagne le jeu et la passer de display:none à display:block en CSS pour qu'elle apparaisse au joueur.
     }
 }
-
-
