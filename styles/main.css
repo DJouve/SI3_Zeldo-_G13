@@ -36,6 +36,8 @@ body{
     background-image: url("../images/backw0.png");
     background-repeat: no-repeat;
     background-size: contain;
+    left: 22.4vw;
+    top: 32vw;
 }
 .plateau img{
     width: 900px;
