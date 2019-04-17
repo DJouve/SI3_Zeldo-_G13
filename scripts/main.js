@@ -214,7 +214,7 @@ class Monster { // La class pour faire les monstres
         if (spawn = 2){
             div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
-        }
+        q}
     }
 }
 
