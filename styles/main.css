@@ -17,13 +17,12 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    border: 2px solid #BADA55;
     background-color: white;
     margin-top : 20px;
 }
 .plateau{
     width : 48vw;
-    height: 34vw;
+    height: 33.6vw;
     /*border: 2px solid red;*/
     position: absolute;
     top: 52%;
@@ -31,12 +30,14 @@ body{
     transform: translate(-50%,-50%);
 }
 .player{
-    width: 2.2vw;
-    height: 2.2vw;
-    top : 32vw;
-    left: 23vw;
-    background: red;
+    width: 3.8vw;
+    height: 3.8vw;
     position: absolute;
+    background-image: url("../images/backw0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 22.4vw;
+    top: 32vw;
 }
 .plateau img{
     width: 900px;
