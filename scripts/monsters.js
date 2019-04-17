@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 let allMonsters = []
 let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
@@ -7,6 +8,8 @@ let spawnNumber = 1
 let counter = 0
 let button = document.querySelector("button")
 =======
+=======
+>>>>>>> parent of e91d3f1... push
 =======
 >>>>>>> parent of e91d3f1... push
 
@@ -29,11 +32,15 @@ class Monster {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e91d3f1... push
 
 let allMonsters = []
 let spawnNumber = 4
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
@@ -187,6 +194,18 @@ let allMonsters = []
 let spawnNumber = 4
 
 
+for (let i = 0; i < spawnNumber; i++) {
+    let newMonster = new Monster(document.querySelector('.plateau'), 6)
+    allMonsters.push(newMonster)
+}
+for (let i = 0; i < allMonsters.length; i++) {
+    if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
+        allMonsters[i].life -= 1
+        if (allMonsters[i].life <= 0){
+            allMonsters.remove(allMonsters[i])
+        }
+>>>>>>> parent of e91d3f1... push
+=======
 for (let i = 0; i < spawnNumber; i++) {
     let newMonster = new Monster(document.querySelector('.plateau'), 6)
     allMonsters.push(newMonster)
