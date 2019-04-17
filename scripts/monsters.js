@@ -1,7 +1,8 @@
 let allMonsters = []
 let spawnNumber = 4
 let monsters = document.querySelector(".monsters")
-let monstersStep = 0.8
+let monstersStep = 0.6
+
 
 class Monster {
     constructor (plateau, monsterLife){
@@ -43,7 +44,7 @@ for (let i = 0; i < spawnNumber; i++) {
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
         // Gestion attaque
-        if ((isAttackingTop == true) && (allMonsters[i].style.top - playerTop < 10) && (rapportLeft >= -10) && (rapportLeft <= 10)){
+        if ((isAttackingTop == true) && (allMonsters[i].style.top - playerTop < 10) && (rapportLeft >= (-10)) && (rapportLeft <= 10)){
             this.div.monsterLife -= 2
 
             if (this.div.monsterLife <= 0){
@@ -70,4 +71,4 @@ setInterval(function(){
             allMonsters[i].moveRight()
             }
         }
-},1000)
+},500)

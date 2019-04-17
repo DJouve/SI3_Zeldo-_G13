@@ -10,7 +10,6 @@ body{
     width: 60vw;
     height: 46.74vw;
     margin: 0 auto;
-    margin-top: 4%;
     position: relative;
 }
 .game{
@@ -25,7 +24,7 @@ body{
     height: 33.6vw;
     /*border: 2px solid red;*/
     position: absolute;
-    top: 52%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
