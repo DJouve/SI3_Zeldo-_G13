@@ -46,10 +46,10 @@ body{
 }
 
 .monster{
-    width: 2.2vw;
-    height: 2.2vw;
-    background: #BADA55;
+    width: 4.2vw;
+    height: 4.2vw;
+    background-image:url("../images/monsterFacew0.png");
     position: absolute;
-    top: 12vw;
-    left: 21vw;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
