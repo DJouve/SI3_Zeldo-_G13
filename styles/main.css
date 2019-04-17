@@ -24,7 +24,7 @@ body{
 .plateau{
     width : 48vw;
     height: 34vw;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: absolute;
     top: 52%;
     left: 50%;
@@ -42,4 +42,13 @@ body{
     width: 900px;
     height: 600px;
     background-size: cover;
+}
+
+.monster{
+    width: 2.2vw;
+    height: 2.2vw;
+    background: #BADA55;
+    position: absolute;
+    top: 12vw;
+    left: 21vw;
 }
