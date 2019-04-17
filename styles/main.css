@@ -1,5 +1,5 @@
 body{
-    background-color: #222;
+    background-image: linear-gradient(to left top, #686233, #575632, #474a30, #3a3d2e, #2f312b);
     overflow: hidden;
     height: 100%;
 }
