@@ -20,20 +20,20 @@ class Monster { // La class pour faire les monstres
         plateau.appendChild(this.monster)
         spawn(monster)
     }
-    spawn(monster){ // Fonction pour faire spawn les monstres à une des 3 portes. Ca fonctionne pas 
+    spawn(monster){ // Fonction pour faire spawn les monstres à une des 3 portes. Ca fonctionne pas
         let spawn = Math.floor(math.random()*4)
         if (spawn = 0){
             div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
         }
         if (spawn = 1){
-            div.style.top = 2 + "vw"    
+            div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
         }
         if (spawn = 2){
             div.style.top = 2 + "vw"
             div.style.left = 20 + 'vw'
-        }       
+        }
     }
 }
 
@@ -83,8 +83,8 @@ function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
             plateau.removeChild(soldier)
             compte++
         }
-    } 
-    
+    }
+
     if (compte == 14){ // L'idée c'est que quand on tue 15 monstres, on passe au niveau suivant
         reset ()
         game2 ()
@@ -92,7 +92,7 @@ function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
 }
 
 function game2 (){// Fonction du niveau 2
-    
+
     let compte = 0
     while (compte < 15) {
         for (i=0; i<1; i++){
@@ -106,7 +106,7 @@ function game2 (){// Fonction du niveau 2
             plateau.removeChild(autremonstre)
             compte++
         }
-    } 
+    }
     if (compte == 14){ // Même principe que le niveau 1
         reset ()
         game3()

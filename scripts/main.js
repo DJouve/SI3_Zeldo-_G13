@@ -16,6 +16,7 @@ let isAttackingRight = false
 let isAttackingDown = false
 let isAttackingLeft = false
 let stunned = false
+let life = 6
 
 
 function morphStill(){
@@ -104,9 +105,9 @@ function animate(e){
         }
     }
     if(e.keyCode == 69){
-        /*player.style.backgroundImage = "url('images/pride.png')"
-        player.style.height = 12 + "vw"*/
         player.style.backgroundImage = "url('images/stunned.png')"
+        player.style.height = 12 + "vw"
+        stunned  = true
 
     }
     if((e.keyCode == 32) && (faceSide == true)){
@@ -167,12 +168,18 @@ function animate(e){
             isAttackingLeft = false
         }
     }
-    if(stunned == true){
-        for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
+
+    /*if(stunned == true){
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/stunned.png')"
-                player.style.height = player.style.height + fightSprite + "vw"
-            }, 120 *  fightSprite)
-    }
+                step = 0
+            },100)
+            player.style.backgroundImage = "url('images/face2.png')"
+            stunned  = false
+            step = 0.8
+    }*/
 }
+
+if((isAttackingTop == true) && (monster)) {
+
 }
