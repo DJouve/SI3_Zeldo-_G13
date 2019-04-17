@@ -1,5 +1,5 @@
 let container = document.querySelector(".container")
-const player = document.querySelector(".player")
+let player = document.querySelector(".player")
 let plateau = document.querySelector(".plateau")
 let playerLeft = 22.4
 let playerTop = 32
@@ -19,11 +19,22 @@ let stunned = false
 let life = 6
 
 
+function morphStill(){
+    player.style.height += 1
+    player.style.height -= 1
+
+}
+setTimeout(function() {
+    morphStill(); }, 500)
+
+morphStill()
 
 function morph() {
     player.style.backgroundImage = "url('images/facew"+spriteNumber+".png')"
     spriteNumber++
     spriteNumber = spriteNumber % 8
+
+
 }
 function morphup(){
     player.style.backgroundImage = "url('images/backw"+spriteNumber+".png')"
@@ -97,7 +108,6 @@ function animate(e){
         player.style.backgroundImage = "url('images/stunned.png')"
         player.style.height = 12 + "vw"
         stunned  = true
-        monsterLife --
 
     }
     if((e.keyCode == 32) && (faceSide == true)){
@@ -168,4 +178,8 @@ function animate(e){
             stunned  = false
             step = 0.8
     }*/
+}
+
+if((isAttackingTop == true) && (monster)) {
+
 }

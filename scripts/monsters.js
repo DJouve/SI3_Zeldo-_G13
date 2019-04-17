@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 let allMonsters = []
 let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
 let spawnNumber = 1
 let counter = 0
 let button = document.querySelector("button")
+=======
+
+>>>>>>> parent of e91d3f1... push
 class Monster {
     constructor (plateau, monsterLife){
         this.div = document.createElement ("div")
@@ -20,23 +24,13 @@ class Monster {
         plateau.removeChild(this.div)
     }
 
-    moveRight(){
-        this.div.style.left = (parseFloat(this.div.style.left) + monstersStep) + "vw"
-    }
-
-    moveLeft(){
-        this.div.style.left = (parseFloat(this.div.style.left) - monstersStep) + "vw"
-    }
-
-    moveUp(){
-        this.div.style.top = (parseFloat(this.div.style.top) - monstersStep) + "vw"
-    }
-
-    moveDown(){
-        this.div.style.top = (parseFloat(this.div.style.top) + monstersStep) + "vw"
-    }
 }
 
+let allMonsters = []
+let spawnNumber = 4
+
+
+<<<<<<< HEAD
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
         // Gestion attaque
@@ -171,5 +165,17 @@ function game3(){// Fonction du niveau 3
                 endgame()
             }
         }
+=======
+for (let i = 0; i < spawnNumber; i++) {
+    let newMonster = new Monster(document.querySelector('.plateau'), 6)
+    allMonsters.push(newMonster)
+}
+for (let i = 0; i < allMonsters.length; i++) {
+    if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
+        allMonsters[i].life -= 1
+        if (allMonsters[i].life <= 0){
+            allMonsters.remove(allMonsters[i])
+        }
+>>>>>>> parent of e91d3f1... push
     }
 }
