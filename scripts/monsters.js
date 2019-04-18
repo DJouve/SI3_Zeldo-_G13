@@ -4,6 +4,7 @@ let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
 let counter = 0
 
+
 class Monster {
     constructor (plateau, monsterLife){
         this.div = document.createElement ("div")
@@ -65,7 +66,7 @@ function spawn(){
     console.log("Pute");
     for (let i = 0; i < spawnNumber; i++) {
         let newMonster = new Monster(document.querySelector('.plateau'), 6)
-        allMonsters.push(newMonster)        
+        allMonsters.push(newMonster)
         console.log("oui")
     }
 }
@@ -77,9 +78,6 @@ function damage(){
             if (allMonsters[i].life <= 0){
                 allMonsters.splice(i,1)
                 death()
-            }
-            if (allMonsters.length < 1){
-                game2()
             }
         }
     }

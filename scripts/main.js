@@ -140,6 +140,7 @@ function animate(e){
             }, 120 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/backw0.png')"
+                console.log(isAttackingTop)
             },600)
             // Gestion dégats
             for (var i = 0; i < allMonsters.length; i++) {
