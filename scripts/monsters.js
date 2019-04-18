@@ -3,6 +3,10 @@ let spawnNumber = 4
 let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
 let counter = 0
+let button = document.querySelector("button")
+function hide(){
+    button.classList.add('hide')
+}
 
 
 class Monster {
@@ -70,7 +74,7 @@ function spawn(){
     }
 }
 
-function damage(){
+ function damage(){
     for (let i = 0; i < allMonsters.length; i++) {
         if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
             allMonsters[i].life -= 1
@@ -99,11 +103,12 @@ function init(e){
     resetLonk()
 }
 
-let button = document.querySelector("button")
-button.addEventListener(
-    'click',
-    init
-)
+
+button.addEventListener('click',function(e) {
+    init(e)
+    hide()
+})
+
 
 function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
     spawnNumber = 4

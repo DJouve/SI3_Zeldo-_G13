@@ -144,7 +144,7 @@ function animate(e){
             },600)
             // Gestion dégats
             for (var i = 0; i < allMonsters.length; i++) {
-                if ((isAttackingTop == true) && (allMonsters[i].div.style.top - playerTop < 40) && (rapportLeft >= -40) && (rapportLeft <= 10)){
+                if ((isAttackingTop == true) && (allMonsters[i].div.style.top - playerTop < 40) && (rapportLeft >= -40) && (rapportLeft <= 40)){
                     allMonsters[i].div.monsterLife -= 2
                     console.log("aïe")
 
