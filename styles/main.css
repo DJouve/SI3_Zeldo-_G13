@@ -10,7 +10,6 @@ body{
     width: 60vw;
     height: 46.74vw;
     margin: 0 auto;
-    margin-top: 4%;
     position: relative;
     display: flex;
 }
@@ -26,7 +25,7 @@ body{
     height: 33.6vw;
     /*border: 2px solid red;*/
     position: absolute;
-    top: 52%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -68,20 +67,20 @@ body{
 }
 .left{
     left: 2.5vw;
-    top : 3vw;
+    top : 2vw;
 }
 .right{
     right : 3vw;
-    top: 3vw;
+    top: 2vw;
 }
 .aside img{
-    width: 70%;
-    height: auto;
-    padding: 2px;
+    width: 7vw;
+    height: 5.5vw;
 }
 .text{
     font-size: 20px;
     color:goldenrod;
+
 }
 
 button{
@@ -101,4 +100,3 @@ button{
 .hide{
     display: none;
 }
-
