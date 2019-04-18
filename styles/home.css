@@ -177,3 +177,12 @@ display: block;
   url('../fonts/Triforce.ttf')
   format('truetype');
 }
+
+.howToPlay{
+  margin: 0 100px;
+}
+
+table{
+  margin: 0 265px;
+  width: 700px;
+}
