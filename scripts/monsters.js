@@ -48,7 +48,11 @@ class Monster {
     get rapportTop(){
         return parseInt(this.div.style.top) - playerTop
     }
+    monsterAttack(){
+
+    }
 }
+
 
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
@@ -76,7 +80,13 @@ function spawn(spawnNumber){
     for (let i = 0; i < spawnNumber; i++) {
         let newMonster = new Monster(document.querySelector('.plateau'), 6)
         allMonsters.push(newMonster)
-        console.log("oui")
+    }
+}
+function spawnBoss(spawnNumber){
+    for (let i = 0; i < spawnNumber; i++) {
+        let newMonster = new Monster(document.querySelector('.plateau'), 40)
+        newMonster.div.classList.add('boss')
+        allMonsters.push(newMonster)
     }
 }
 
@@ -126,5 +136,5 @@ function game3(){// Fonction du niveau 3
     spawn(10)
 }
 function boss() {
-    // Faire apparaitre
+    spawnBoss(1)
 }
