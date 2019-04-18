@@ -4,15 +4,112 @@ body{
     height: 100%;
 }
 
+/*Navbar & Footer*/
+#topLeft {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 96px;
+  z-index:3;
+}
 
+#topRight {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 96px;
+  z-index:3;
+}
+
+#bottomLeft {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  z-index:3;
+}
+
+#bottomRight {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  z-index:3;
+}
+
+.navbar {
+  overflow: hidden;
+  background-image: url('../images/Navbar.png');
+  position: fixed;
+  top: 0;
+  height: 96px;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar li {
+
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style:none;
+}
+
+img.lonk {
+  width: 32px;
+  margin: 15px;
+  -webkit-transition: margin 0.4s ease-out;
+  -moz-transition: margin 0.4s ease-out;
+  -o-transition: margin 0.4s ease-out;
+}
+
+img.headerItem {
+  width: 72px;
+  margin: 15px;
+  -webkit-transition: margin 0.4s ease-out;
+  -moz-transition: margin 0.4s ease-out;
+  -o-transition: margin 0.4s ease-out;
+
+}
+
+.navbar img:hover {
+  margin-top: 2px;
+}
+
+.footer {
+  overflow: hidden;
+  background-image: url('../images/footer.png');
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the top of the page */
+  height: 90px;
+  width: 100%; /* Full width */
+}
+
+
+/*Game*/
 
 .container{
     width: 60vw;
     height: 46.74vw;
     margin: 0 auto;
+    margin-top: 60px;
     position: relative;
     display: flex;
-    
+
 }
 .game{
     margin: 0 auto;
@@ -54,12 +151,20 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-
+.boss{
+    width: 18vw;
+    height: 18vw;
+    background-image: url("../images/bossw0.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 100%;
+}
 .aside{
     position: absolute;
     width: 12.6vw;
     height: 40vw  ;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 9px;
     padding: 1.2vw;
     color: white;
