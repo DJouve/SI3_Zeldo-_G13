@@ -53,14 +53,7 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.boss{
-    width: 18vw;
-    height: 18vw;
-    background-image:url("../images/bossw0.png");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+
 .aside{
     position: absolute;
     width: 12.6vw;
