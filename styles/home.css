@@ -1,5 +1,6 @@
 body{
   background-color: #FBEDC1;
+  position:absolute;
 }
 
 
@@ -74,7 +75,6 @@ ul {
   justify-content: center;
   align-items: center;
   list-style:none;
-  text-align:center;
 }
 
 main {
@@ -83,10 +83,14 @@ main {
   margin-left: 76px;
   margin-right: 76px;
   margin-left: 76px;
-  text-align:center;
-  font-family: Triforce;
-  font-size: 50px;
-  color: #D17B4F;
+  text-align: center;
+}
+
+h2{
+text-align:center;
+font-family: Triforce;
+font-size: 60px;
+color: #D17B4F;
 }
 
 img.lonk {
@@ -113,11 +117,12 @@ img.headerItem {
 img#cartridge{
   margin-top: 60px;
   width: 100%;
+  z-index: 3;
 }
 
 img#logo{
-  margin-left: 30%;
-  width: 40%;
+  margin-left: 27%;
+  width: 50%;
 }
 
 div.description {
@@ -129,10 +134,11 @@ div.description {
 }
 
 .cartridge{
-  position: relative;
+position:relative;
+display: block;
 }
 
-  .text {
+.text {
     margin-right: 40px;
     width: 60%;
     font-family: ReturnofGanon;
@@ -142,10 +148,19 @@ div.description {
     color: #000000;
   }
 
+.video{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: contain;
+}
+
 #video{
- position:absolute;
  top: 60px;
  left: 0px;
+ width: 100%;
+ position: absolute;
+ z-index: -1;
 
 }
 
