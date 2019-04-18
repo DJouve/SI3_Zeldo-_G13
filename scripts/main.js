@@ -11,10 +11,7 @@ let faceSide = false
 let backSide = true
 let leftSide = false
 let rightSide = false
-let isAttackingTop = false
-let isAttackingRight = false
-let isAttackingDown = false
-let isAttackingLeft = false
+let isAttacking = false
 let stunned = false
 let life = 6
 
@@ -100,85 +97,87 @@ function animate(e){
         monsterLife --
 
     }
-    if((e.keyCode == 32) && (faceSide == true)){
+    if(e.keyCode == 32 && faceSide == true && !isAttacking){
+        isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 6; fightSprite++) {
             setTimeout(function() {
-                isAttackingDown = true
                 player.style.backgroundImage = "url('images/facefight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 100 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/face2.png')"
+                isAttacking = false
             },700)
-            isAttackingDown = false
         }
     }
 
-    if((e.keyCode == 32) && (rightSide == true)){
+    if(e.keyCode == 32 && rightSide == true && !isAttacking){
+        isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                isAttackingRight = true
                 player.style.backgroundImage = "url('images/rightfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/rightw0.png')"
+                isAttacking = false
             },600)
-            isAttackingRight = false
         }
     }
 
-    if((e.keyCode == 32) && (backSide == true)){
+    if(e.keyCode == 32 && backSide == true && !isAttacking){
+        isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                isAttackingTop = true
                 player.style.backgroundImage = "url('images/backfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/backw0.png')"
-                console.log(isAttackingTop)
+                isAttacking = false
             },600)
-            // Gestion dégats
-            for (var i = 0; i < allMonsters.length; i++) {
-                if ((isAttackingTop == true) && (allMonsters[i].div.style.top - playerTop < 40) && (rapportLeft >= -40) && (rapportLeft <= 40)){
-                    allMonsters[i].div.monsterLife -= 2
-                    console.log("aïe")
-
-                    if (allMonsters[i].div.monsterLife <= 0){
-                        allMonsters.splice(i,1)
-                        death()
-                    }
+        }
+        // Gestion dégats
+        for (var i = 0; i < allMonsters.length; i++) {
+            if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= 0){
+                allMonsters[i].monsterLife -= 2
+                console.log("aïe")
+                if (allMonsters[i].monsterLife <= 0){
+                    allMonsters[i].death(plateau)
+                    allMonsters.splice(i,1)
+                    // Vérifier si il y a encore des monstres
                 }
             }
-            isAttackingTop = false
         }
     }
-    if((e.keyCode == 32) && (leftSide == true)){
+    if(e.keyCode == 32 && leftSide == true && !isAttacking){
+        isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                isAttackingLeft = true
                 player.style.backgroundImage = "url('images/leftfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/leftw0.png')"
+                isAttackingLeft = false
             },600)
-            isAttackingLeft = false
         }
     }
 
-    /*if(stunned == true){
-            setTimeout(function() {
-                player.style.backgroundImage = "url('images/stunned.png')"
-                step = 0
-            },100)
-            player.style.backgroundImage = "url('images/face2.png')"
-            stunned  = false
-            step = 0.8
-    }*/
+    // Gestion dégats
+    for (var i = 0; i < allMonsters.length; i++) {
+        if (allMonsters[i].rapportLeft >= 0 && allMonsters[i].rapportLeft <= 5 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
+            allMonsters[i].monsterLife -= 2
+            if (allMonsters[i].monsterLife <= 0){
+                allMonsters[i].death(plateau)
+                allMonsters.splice(i,1)
+                // Vérifier si il y a encore des monstres
+            }
+        }
+    }
+
 }

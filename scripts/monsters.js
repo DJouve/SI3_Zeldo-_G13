@@ -40,6 +40,13 @@ class Monster {
     moveDown(){
         this.div.style.top = (parseFloat(this.div.style.top) + monstersStep) + "vw"
     }
+
+    get rapportLeft(){
+        return parseInt(this.div.style.left) - playerLeft
+    }
+    get rapportTop(){
+        return parseInt(this.div.style.top) - playerTop
+    }
 }
 
 setInterval(function(){
@@ -47,8 +54,6 @@ setInterval(function(){
         // Gestion déplacement des monstres
         let rapportLeft = parseInt(allMonsters[i].div.style.left) - playerLeft
         let rapportTop = parseInt(allMonsters[i].div.style.top) - playerTop
-        //console.log(rapportTop)
-        //console.log(rapportLeft)
         // Tu check position relative du monstre par rapport au perso
         if (rapportTop > 0) {
             allMonsters[i].moveUp()
@@ -66,7 +71,7 @@ setInterval(function(){
 },1000)
 
 
-function spawn(){
+function spawn(spawnNumber){
     for (let i = 0; i < spawnNumber; i++) {
         let newMonster = new Monster(document.querySelector('.plateau'), 6)
         allMonsters.push(newMonster)
@@ -111,28 +116,14 @@ button.addEventListener('click',function(e) {
 
 
 function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
-    spawnNumber = 4
     // for (i = 0; i<allMonsters.length; i++){
-    spawn()
-    damage()
-    if (allMonsters.length < 1){
-        resetLonk()
-        game2()
-    }
+    spawn(4)
 }
 function game2 (){ // Fonction pour lancer le premier niveau -> pop des monstres
-    spawnNumber = 6
     // for (i = 0; i<allMonsters.length; i++){
-    spawn()
-    damage()
-    if (allMonsters.length < 1){
-        resetLonk()
-        game3()
-    }
+    spawn(6)
 }
 function game3(){// Fonction du niveau 3
-    spawnNumber = 10
     // for (i = 0; i<allMonsters.length; i++){
-    spawn()
-    damage()
+    spawn(10)
 }
