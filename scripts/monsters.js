@@ -80,7 +80,7 @@ function spawn(spawnNumber){
     }
 }
 
- function damage(){
+/* function damage(){
     for (let i = 0; i < allMonsters.length; i++) {
         if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
             allMonsters[i].life -= 1
@@ -91,7 +91,7 @@ function spawn(spawnNumber){
         }
     }
 }
-
+*/
 
 
 
@@ -117,14 +117,14 @@ button.addEventListener('click',function(e) {
 
 
 function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
-    // for (i = 0; i<allMonsters.length; i++){
     spawn(4)
 }
 function game2 (){ // Fonction pour lancer le premier niveau -> pop des monstres
-    // for (i = 0; i<allMonsters.length; i++){
     spawn(6)
 }
 function game3(){// Fonction du niveau 3
-    // for (i = 0; i<allMonsters.length; i++){
     spawn(10)
+}
+function boss() {
+    // Faire apparaitre
 }

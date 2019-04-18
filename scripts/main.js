@@ -14,6 +14,7 @@ let rightSide = false
 let isAttacking = false
 let stunned = false
 let life = 6
+let level = 0
 
 
 
@@ -37,13 +38,26 @@ function morphleft(){
     spriteGrad++
     spriteGrad =  spriteGrad % 6
 }
-function  verifMonstersAlive(monster){
+function  verifMonstersAlive(monster,i){
     if (monster.monsterLife <= 0){
         monster.death(plateau)
         allMonsters.splice(i,1)
         // Vérifier si il y a encore des monstres
         if (allMonsters.length == 0) {
-            game2()
+            level++
+            switch (level) {
+                case 1:
+                    game2()
+                    break;
+                case 2:
+                    game3()
+                    break;
+                case 3:
+                    boss()
+                    break;
+                default:
+
+            }
         }
     }
 }
@@ -124,7 +138,7 @@ function animate(e){
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 5 && allMonsters[i].rapportTop >= 0){
                 allMonsters[i].monsterLife -= 2
-                verifMonstersAlive(allMonsters[i])
+                verifMonstersAlive(allMonsters[i],i)
             }
         }
     }
@@ -146,7 +160,7 @@ function animate(e){
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= 0 && allMonsters[i].rapportLeft <= 5 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
                 allMonsters[i].monsterLife -= 2
-                verifMonstersAlive(allMonsters[i])
+                verifMonstersAlive(allMonsters[i],i)
             }
         }
     }
@@ -169,7 +183,7 @@ function animate(e){
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 0 && allMonsters[i].rapportTop >= -5){
                 allMonsters[i].monsterLife -= 2
-                verifMonstersAlive(allMonsters[i])
+                verifMonstersAlive(allMonsters[i],i)
             }
         }
     }
@@ -191,7 +205,7 @@ function animate(e){
         if (allMonsters[i].rapportLeft >= -5 && allMonsters[i].rapportLeft <= 0 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
             console.log("aie")
             allMonsters[i].monsterLife -= 2
-            verifMonstersAlive(allMonsters[i])
+            verifMonstersAlive(allMonsters[i],i)
            }
         }
     }
