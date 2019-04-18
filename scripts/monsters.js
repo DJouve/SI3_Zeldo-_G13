@@ -122,7 +122,7 @@ function spawnBoss(spawnNumber){
 }
 */
 
-
+let audio = document.querySelector("audio")
 
 function resetLonk(){
     playerLeft = 22.4
@@ -136,6 +136,7 @@ function init(e){
     button.blur()
     game1 ()
     resetLonk()
+    audio.play()
 }
 
 
