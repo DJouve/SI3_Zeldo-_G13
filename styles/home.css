@@ -151,7 +151,16 @@ display: block;
     text-align: justify;
     color: #000000;
   }
-
+.rokkitt
+{
+  font-family: 'Rokkitt', serif;
+}
+table th{
+  font-family: 'Rokkitt', serif;
+}
+table td{
+  font-family: 'Rokkitt', serif;
+}
 .video{
   width: 100%;
   position: absolute;

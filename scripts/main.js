@@ -140,7 +140,7 @@ function animate(e){
                 isAttacking = false
             },700)
         }
-        // Gestion dégats
+        
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 5 && allMonsters[i].rapportTop >= 0){
                 allMonsters[i].monsterLife -= 2
@@ -162,7 +162,7 @@ function animate(e){
                 isAttacking = false
             },600)
         }
-        // Gestion dégats
+        
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= 0 && allMonsters[i].rapportLeft <= 5 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
                 allMonsters[i].monsterLife -= 2
@@ -185,7 +185,7 @@ function animate(e){
             },600)
         }
 
-        // Gestion dégats
+        
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 0 && allMonsters[i].rapportTop >= -5){
                 allMonsters[i].monsterLife -= 2
@@ -206,7 +206,7 @@ function animate(e){
                 isAttacking = false
             },600)
         }
-    // Gestion dégats
+    
     for (var i = 0; i < allMonsters.length; i++) {
         if (allMonsters[i].rapportLeft >= -5 && allMonsters[i].rapportLeft <= 0 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
             allMonsters[i].monsterLife -= 2
