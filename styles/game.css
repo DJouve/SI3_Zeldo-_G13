@@ -150,7 +150,6 @@ img.headerItem {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translate(-25%,-100%);
 }
 .aside{
     position: absolute;
