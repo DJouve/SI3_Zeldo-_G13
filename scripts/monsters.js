@@ -2,6 +2,7 @@ let allMonsters = []
 let spawnNumber = 4
 let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
+let counter = 0
 
 class Monster {
     constructor (plateau, monsterLife){
@@ -36,10 +37,6 @@ class Monster {
     }
 }
 
-for (let i = 0; i < spawnNumber; i++) {
-    let newMonster = new Monster(document.querySelector('.plateau'), 6)
-    allMonsters.push(newMonster)
-}
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
         // Gestion attaque
@@ -71,3 +68,58 @@ setInterval(function(){
             }
         }
 },1000)
+
+
+function spawn(){
+    console.log("Pute");
+    for (let i = 0; i < spawnNumber; i++) {
+        let newMonster = new Monster(document.querySelector('.plateau'), 6)
+        allMonsters.push(newMonster)        
+        console.log("oui")
+    }
+}
+
+function damage(){
+    for (let i = 0; i < allMonsters.length; i++) {
+        if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
+            allMonsters[i].life -= 1
+            if (allMonsters[i].life <= 0){
+                allMonsters.splice(i,1)
+                death()
+            }
+            if (allMonsters.length < 1){
+                game2()
+            }
+        }
+    }
+}
+
+function init(e){
+    button.blur()
+    game1 ()
+}
+
+let button = document.querySelector("button")
+button.addEventListener(
+    'click',
+    init
+)
+
+function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
+    spawnNumber = 4
+    // for (i = 0; i<allMonsters.length; i++){
+    spawn()
+    damage()
+}
+function game2 (){ // Fonction pour lancer le premier niveau -> pop des monstres
+    spawnNumber = 6
+    // for (i = 0; i<allMonsters.length; i++){
+    spawn()
+    damage()
+}
+function game3(){// Fonction du niveau 3
+    spawnNumber = 10
+    // for (i = 0; i<allMonsters.length; i++){
+    spawn()
+    damage()
+}
