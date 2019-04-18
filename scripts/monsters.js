@@ -71,7 +71,6 @@ setInterval(function(){
 
 
 function spawn(){
-    console.log("Pute");
     for (let i = 0; i < spawnNumber; i++) {
         let newMonster = new Monster(document.querySelector('.plateau'), 6)
         allMonsters.push(newMonster)        
@@ -87,16 +86,20 @@ function damage(){
                 allMonsters.splice(i,1)
                 death()
             }
-            if (allMonsters.length < 1){
-                game2()
-            }
         }
     }
 }
 
+function resetLonk(){
+    playerLeft = 22.4
+    playerTop = 32
+    player.style.left = playerLeft + "vw"
+    player.style.top = playerTop + "vw"
+}
 function init(e){
     button.blur()
     game1 ()
+    resetLonk()
 }
 
 let button = document.querySelector("button")
