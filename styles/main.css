@@ -57,10 +57,10 @@ body{
 
 .aside{
     position: absolute;
-    width: 12vw;
-    height: auto   ;
+    width: 12.6vw;
+    height: 40vw  ;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 6px;
+    border-radius: 9px;
     padding: 1.2vw;
     color: white;
     font-family: 'Acme', sans-serif;
@@ -68,20 +68,40 @@ body{
 }
 .left{
     left: 2.5vw;
-    top : 3vw;
+    top : 3.5vw;
 }
 .right{
     right : 3vw;
-    top: 3vw;
+    top: 3.5vw;
+}
+.aside h2{
+    font-size: 22px;
 }
 .aside img{
     width: 70%;
     height: auto;
-    padding: 2px;
+    padding: 7px;
+}
+.aside link{
+    margin-top: 10px;
+}
+.aside a{
+    text-decoration: none;
+    color: white;
+    border: 4px solid white;
+    border-radius: 60px;
+    background-image : radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
+    width: 100%;
+    font-size: 1.6vw;
+    height: auto;
+    padding: 12px;
 }
 .text{
     font-size: 20px;
     color:goldenrod;
+}
+div.text strong{
+    color: white;
 }
 
 button{
