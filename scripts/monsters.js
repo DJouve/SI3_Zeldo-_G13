@@ -4,6 +4,7 @@ let monsters = document.querySelector(".monsters")
 let monstersStep = 0.8
 let counter = 0
 
+
 class Monster {
     constructor (plateau, monsterLife){
         this.div = document.createElement ("div")
@@ -64,7 +65,7 @@ setInterval(function(){
 function spawn(){
     for (let i = 0; i < spawnNumber; i++) {
         let newMonster = new Monster(document.querySelector('.plateau'), 6)
-        allMonsters.push(newMonster)        
+        allMonsters.push(newMonster)
         console.log("oui")
     }
 }
