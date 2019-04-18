@@ -38,6 +38,10 @@ function morphleft(){
     spriteGrad++
     spriteGrad =  spriteGrad % 6
 }
+function clear(){
+    let title = document.createElement('h2')
+    container.appendChild(title)
+}
 function  verifMonstersAlive(monster,i){
     if (monster.monsterLife <= 0){
         monster.death(plateau)
@@ -55,14 +59,16 @@ function  verifMonstersAlive(monster,i){
                 case 3:
                     boss()
                     break;
-                default:
-
+                case 4:
+                    clear()
+                    break;
             }
         }
     }
 }
 document.onkeydown = animate
 function animate(e){
+    console.log(playerLife)
     if(e.keyCode == 39){
         if(playerLeft + step < 47){
             playerLeft += step

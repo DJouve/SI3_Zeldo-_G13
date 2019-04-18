@@ -7,6 +7,7 @@ let button = document.querySelector("button")
 let spriteNumberBoss = 0
 let playerLife = 6
 let damage = 0.5
+let audio = document.querySelector("audio")
 
 function hide(){
     button.classList.add('hide')
@@ -65,7 +66,7 @@ class Monster {
             monsterAttack()
             playerLife -= damage
             if(playerLife <= 0){
-
+                player.style.backgroundImage = "url('../images/stunned.png')"
 
             }
         }
@@ -102,27 +103,12 @@ function spawn(spawnNumber){
 }
 function spawnBoss(spawnNumber){
     for (let i = 0; i < spawnNumber; i++) {
-        let newMonster = new Monster(document.querySelector('.plateau'), 40)
+        let newMonster = new Monster(document.querySelector('.plateau'), 24)
         newMonster.div.classList.add('boss')
         allMonsters.push(newMonster)
         monstersStep = 1.2
     }
 }
-
-/* function damage(){
-    for (let i = 0; i < allMonsters.length; i++) {
-        if ((isAttackingTop == true) && (allMonsters[i].style.top - player.style.top < 3)){
-            allMonsters[i].life -= 1
-            if (allMonsters[i].life <= 0){
-                allMonsters.splice(i,1)
-                death()
-            }
-        }
-    }
-}
-*/
-
-let audio = document.querySelector("audio")
 
 function resetLonk(){
     playerLeft = 22.4
