@@ -84,7 +84,7 @@ body{
 
 }
 
-button.startbutton{
+button{
     height: 5vw;
     width: 17vw;
     background-image: radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
