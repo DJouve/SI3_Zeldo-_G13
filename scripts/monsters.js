@@ -6,7 +6,7 @@ let counter = 0
 let button = document.querySelector("button")
 let spriteNumberBoss = 0
 let playerLife = 6
-let damage = 0.1
+let damage = 0.05
 let audio = document.querySelector("audio")
 
 function hide(){
