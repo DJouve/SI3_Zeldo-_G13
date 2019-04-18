@@ -6,7 +6,7 @@ let counter = 0
 let button = document.querySelector("button")
 let spriteNumberBoss = 0
 let playerLife = 6
-let damage = 0.1
+let damage = 0.05
 let audio = document.querySelector("audio")
 
 function hide(){
@@ -62,6 +62,8 @@ class Monster {
         playerLife -= damage
         if(playerLife <= 0){
             player.style.backgroundImage = "url('../images/stunned.png')"
+            playerDead = true
+
         }
 
     }
@@ -99,11 +101,10 @@ setInterval(function(){
         if (allMonsters[i].rapportLeft  < 0) {
             allMonsters[i].moveRight()
         }
-        if (allMonsters[i].rapportTop<1 && allMonsters[i].rapportLeft<1){
+        if (allMonsters[i].rapportTop<0.6 && allMonsters[i].rapportLeft<0.6){
             allMonsters[i].monsterAttack()
         }
     }
-    console.log(playerLife)
 },600)
 
 

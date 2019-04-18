@@ -15,6 +15,7 @@ let isAttacking = false
 let stunned = false
 let life = 6
 let level = 0
+let playerDead = false
 
 
 
@@ -69,7 +70,7 @@ function  verifMonstersAlive(monster,i){
 document.onkeydown = animate
 function animate(e){
     if(e.keyCode == 39){
-        if(playerLeft + step < 47){
+        if(playerLeft + step < 47 && playerDead == false){
             playerLeft += step
             player.style.left = playerLeft + 'vw'
             morphright()
@@ -82,7 +83,7 @@ function animate(e){
     }
 
     if(e.keyCode == 37){
-        if(playerLeft - step >= 0) {
+        if(playerLeft - step >= 0 && playerDead == false) {
             playerLeft -= step
             player.style.left = playerLeft + 'vw'
             morphleft()
@@ -95,7 +96,7 @@ function animate(e){
     }
 
     if(e.keyCode == 38){
-        if ( (Math.round((playerTop - step) * 10) / 10) >= 0) {
+        if ( (Math.round((playerTop - step) * 10) / 10) >= 0 && playerDead == false) {
             playerTop = Math.round((playerTop - step) * 10) / 10
             player.style.top = playerTop + 'vw'
             morphup()
@@ -108,7 +109,7 @@ function animate(e){
     }
 
     if(e.keyCode == 40){
-        if( (Math.round((playerTop + step) * 10) / 10) < 33){
+        if( (Math.round((playerTop + step) * 10) / 10) < 33 && playerDead == false){
             playerTop = Math.round((playerTop + step) * 10) / 10
             player.style.top = playerTop + 'vw'
             morph()
@@ -126,7 +127,7 @@ function animate(e){
         monsterLife --
 
     }
-    if(e.keyCode == 32 && faceSide == true && !isAttacking){
+    if(e.keyCode == 32 && faceSide == true && !isAttacking && playerDead == false){
         isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 6; fightSprite++) {
@@ -139,7 +140,7 @@ function animate(e){
                 isAttacking = false
             },700)
         }
-        
+
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 5 && allMonsters[i].rapportTop >= 0){
                 allMonsters[i].monsterLife -= 2
@@ -148,7 +149,7 @@ function animate(e){
         }
     }
 
-    if(e.keyCode == 32 && rightSide == true && !isAttacking){
+    if(e.keyCode == 32 && rightSide == true && !isAttacking && playerDead == false){
         isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
@@ -161,7 +162,7 @@ function animate(e){
                 isAttacking = false
             },600)
         }
-        
+
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= 0 && allMonsters[i].rapportLeft <= 5 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
                 allMonsters[i].monsterLife -= 2
@@ -170,7 +171,7 @@ function animate(e){
         }
     }
 
-    if(e.keyCode == 32 && backSide == true && !isAttacking){
+    if(e.keyCode == 32 && backSide == true && !isAttacking && playerDead == false){
         isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
@@ -184,7 +185,7 @@ function animate(e){
             },600)
         }
 
-        
+
         for (var i = 0; i < allMonsters.length; i++) {
             console.log('------------')
             console.log("allMonsters[i].rapportLeft : " + allMonsters[i].rapportLeft)
@@ -196,7 +197,7 @@ function animate(e){
             }
         }
     }
-    if(e.keyCode == 32 && leftSide == true && !isAttacking){
+    if(e.keyCode == 32 && leftSide == true && !isAttacking && playerDead == false){
         isAttacking = true
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
@@ -209,7 +210,7 @@ function animate(e){
                 isAttacking = false
             },600)
         }
-    
+
     for (var i = 0; i < allMonsters.length; i++) {
         if (allMonsters[i].rapportLeft >= -5 && allMonsters[i].rapportLeft <= 0 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
             allMonsters[i].monsterLife -= 2
