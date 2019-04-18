@@ -1,5 +1,5 @@
 body{
-    background-color: #222;
+    background-image: linear-gradient(to left top, #686233, #575632, #474a30, #3a3d2e, #2f312b);
     overflow: hidden;
     height: 100%;
 }
@@ -25,7 +25,7 @@ body{
     height: 33.6vw;
     /*border: 2px solid red;*/
     position: absolute;
-    top: 53%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -43,4 +43,13 @@ body{
     width: 900px;
     height: 600px;
     background-size: cover;
+}
+
+.monster{
+    width: 4.2vw;
+    height: 4.2vw;
+    background-image:url("../images/monsterFacew0.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
