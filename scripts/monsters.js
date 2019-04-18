@@ -4,11 +4,19 @@ let monsters = document.querySelector(".monsters")
 let monstersStep = 0.6
 let counter = 0
 let button = document.querySelector("button")
+let spriteNumberBoss = 0
+let playerLife = 6
+let damage = 0.5
+
 function hide(){
     button.classList.add('hide')
 }
 
-
+function animateBoss(){
+    monster.div.style.backgroundImage = "url('../images/bossw"+spriteNumberBoss+".png')"
+    spriteNumberBoss++
+    spriteNumberBoss = spriteNumberBoss % 2
+}
 
 class Monster {
     constructor (plateau, monsterLife){
@@ -49,10 +57,20 @@ class Monster {
         return parseInt(this.div.style.top) - playerTop
     }
     monsterAttack(){
+        for (let icount = 0; count < 4; i++) {
+            this.div.style.backgroundImage = "url('../images/backw"+count+".png')"
+        }
 
+        if (rapportTop<3 && rapportLeft<3){
+            monsterAttack()
+            playerLife -= damage
+            if(playerLife <= 0){
+
+
+            }
+        }
     }
 }
-
 
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
@@ -139,4 +157,9 @@ function game3(){// Fonction du niveau 3
 }
 function boss() {
     spawnBoss(1)
+
+    setInterval(function(){
+        animateBoss()
+
+    },1000)
 }

@@ -203,7 +203,6 @@ function animate(e){
     // Gestion dégats
     for (var i = 0; i < allMonsters.length; i++) {
         if (allMonsters[i].rapportLeft >= -5 && allMonsters[i].rapportLeft <= 0 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
-            console.log("aie")
             allMonsters[i].monsterLife -= 2
             verifMonstersAlive(allMonsters[i],i)
            }
