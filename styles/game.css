@@ -90,14 +90,6 @@ img.headerItem {
   margin-top: 2px;
 }
 
-.footer {
-  overflow: hidden;
-  background-image: url('../images/footer.png');
-  position: fixed; /* Set the navbar to fixed position */
-  bottom: 0; /* Position the navbar at the top of the page */
-  height: 90px;
-  width: 100%; /* Full width */
-}
 
 
 /*Game*/
