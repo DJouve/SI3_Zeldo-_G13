@@ -1,0 +1,164 @@
+body{
+  background-color: #FBEDC1;
+}
+
+
+#topLeft {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  height: 96px;
+  z-index:3;
+}
+
+#topRight {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0;
+  right: 0;
+  height: 96px;
+  z-index:3;
+}
+
+#bottomLeft {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  z-index:3;
+}
+
+#bottomRight {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  z-index:3;
+}
+.footer {
+  overflow: hidden;
+  background-image: url('../images/footer.png');
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the top of the page */
+  height: 90px;
+  width: 100%; /* Full width */
+}
+
+.navbar {
+  overflow: hidden;
+  background-image: url('../images/Navbar.png');
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  height: 96px;
+  width: 100%; /* Full width */
+  z-index: 2;
+}
+
+/* Links inside the navbar */
+.navbar li {
+
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style:none;
+  text-align:center;
+}
+
+main {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  margin-left: 76px;
+  margin-right: 76px;
+  margin-left: 76px;
+  text-align:center;
+  font-family: Triforce;
+  font-size: 50px;
+  color: #D17B4F;
+}
+
+img.lonk {
+  width: 32px;
+  margin: 15px;
+  -webkit-transition: margin 0.4s ease-out;
+  -moz-transition: margin 0.4s ease-out;
+  -o-transition: margin 0.4s ease-out;
+}
+
+img.headerItem {
+  width: 72px;
+  margin: 15px;
+  -webkit-transition: margin 0.4s ease-out;
+  -moz-transition: margin 0.4s ease-out;
+  -o-transition: margin 0.4s ease-out;
+
+}
+
+.navbar img:hover {
+  margin-top: 2px;
+}
+
+img#cartridge{
+  margin-top: 60px;
+  width: 100%;
+}
+
+img#logo{
+  margin-left: 30%;
+  width: 40%;
+}
+
+div.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+
+}
+
+.cartridge{
+  position: relative;
+}
+
+  .text {
+    margin-right: 40px;
+    width: 60%;
+    font-family: ReturnofGanon;
+    font-size: 25px;
+    line-height: normal;
+    text-align: justify;
+    color: #000000;
+  }
+
+#video{
+ position:absolute;
+ top: 60px;
+ left: 0px;
+
+}
+
+@font-face {
+  font-family: 'ReturnofGanon';
+  src:
+	url('../fonts/ReturnofGanon.ttf')
+	format('truetype');
+}
+
+@font-face {
+  font-family: 'Triforce';
+  src:
+  url('../fonts/Triforce.ttf')
+  format('truetype');
+}
