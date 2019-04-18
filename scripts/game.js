@@ -83,8 +83,8 @@ function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
             plateau.removeChild(soldier)
             compte++
         }
-    } 
-    
+    }
+
     if (compte == 14){ // L'idée c'est que quand on tue 15 monstres, on passe au niveau suivant
         reset ()
         game2 ()

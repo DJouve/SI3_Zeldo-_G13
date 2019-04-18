@@ -38,7 +38,7 @@ class Monster {
 
 for (let i = 0; i < spawnNumber; i++) {
     let newMonster = new Monster(document.querySelector('.plateau'), 6)
-    allMonsters = document.querySelectorAll(".monster");
+    allMonsters.push(newMonster)
 }
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
