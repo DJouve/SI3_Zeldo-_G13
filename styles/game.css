@@ -158,7 +158,7 @@ img.headerItem {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translate(-25%,-100%);
+    -webkit-transform: translate(-25%,-100%);
 }
 .aside{
     position: absolute;
@@ -203,7 +203,6 @@ img.headerItem {
     font-size: 1.7vw;
     height: auto;
     padding: 12px;
-    opacity: 80%;
 }
 .text{
     font-size: 1.38vw;
@@ -231,6 +230,7 @@ button{
     left: 15vw;
     top: 10vw;
     border: 4px solid white;
+    opacity: 0.8;
 
 }
 .hide{
