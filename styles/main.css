@@ -55,7 +55,36 @@ body{
     background-size: contain;
 }
 
-button{
+.aside{
+    position: absolute;
+    width: 12vw;
+    height: auto   ;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 6px;
+    padding: 1.2vw;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+}
+.left{
+    left: 2.5vw;
+    top : 2vw;
+}
+.right{
+    right : 3vw;
+    top: 2vw;
+}
+.aside img{
+    width: 7vw;
+    height: 5.5vw;
+}
+.text{
+    font-size: 20px;
+    color:goldenrod;
+
+}
+
+button.startbutton{
     height: 5vw;
     width: 17vw;
     background-image: radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
@@ -72,3 +101,4 @@ button{
 .hide{
     display: none;
 }
+
