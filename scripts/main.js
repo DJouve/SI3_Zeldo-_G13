@@ -18,22 +18,22 @@ let life = 6
 
 
 function morph() {
-    player.style.backgroundImage = "url('images/facew"+spriteNumber+".png')"
+    player.style.backgroundImage = "url('../images/facew"+spriteNumber+".png')"
     spriteNumber++
     spriteNumber = spriteNumber % 8
 }
 function morphup(){
-    player.style.backgroundImage = "url('images/backw"+spriteNumber+".png')"
+    player.style.backgroundImage = "url('../images/backw"+spriteNumber+".png')"
     spriteNumber++
     spriteNumber =  spriteNumber % 8
 }
 function morphright(){
-    player.style.backgroundImage = "url('images/rightw"+spriteGrad+".png')"
+    player.style.backgroundImage = "url('../images/rightw"+spriteGrad+".png')"
     spriteGrad++
     spriteGrad =  spriteGrad % 6
 }
 function morphleft(){
-    player.style.backgroundImage = "url('images/leftw"+spriteGrad+".png')"
+    player.style.backgroundImage = "url('../images/leftw"+spriteGrad+".png')"
     spriteGrad++
     spriteGrad =  spriteGrad % 6
 }
@@ -91,7 +91,7 @@ function animate(e){
         }
     }
     if(e.keyCode == 69){
-        player.style.backgroundImage = "url('images/stunned.png')"
+        player.style.backgroundImage = "url('../images/stunned.png')"
         player.style.height = 12 + "vw"
         stunned  = true
         monsterLife --
@@ -102,11 +102,11 @@ function animate(e){
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 6; fightSprite++) {
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/facefight"+fightSprite+".png')"
+                player.style.backgroundImage = "url('../images/facefight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 100 *  fightSprite)
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/face2.png')"
+                player.style.backgroundImage = "url('../images/face2.png')"
                 isAttacking = false
             },700)
         }
@@ -128,11 +128,11 @@ function animate(e){
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/rightfight"+fightSprite+".png')"
+                player.style.backgroundImage = "url('../images/rightfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/rightw0.png')"
+                player.style.backgroundImage = "url('../images/rightw0.png')"
                 isAttacking = false
             },600)
         }
@@ -154,11 +154,11 @@ function animate(e){
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/backfight"+fightSprite+".png')"
+                player.style.backgroundImage = "url('../images/backfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/backw0.png')"
+                player.style.backgroundImage = "url('../images/backw0.png')"
                 isAttacking = false
             },600)
         }
@@ -179,11 +179,11 @@ function animate(e){
         player.style.height = 3.8 + "vw"
         for (let fightSprite = 0; fightSprite < 5; fightSprite++) {
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/leftfight"+fightSprite+".png')"
+                player.style.backgroundImage = "url('../images/leftfight"+fightSprite+".png')"
                 player.style.height = player.style.height + fightSprite + "vw"
             }, 120 *  fightSprite)
             setTimeout(function() {
-                player.style.backgroundImage = "url('images/leftw0.png')"
+                player.style.backgroundImage = "url('../images/leftw0.png')"
                 isAttacking = false
             },600)
         }

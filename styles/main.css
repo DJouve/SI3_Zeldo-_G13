@@ -68,20 +68,20 @@ body{
 }
 .left{
     left: 2.5vw;
-    top : 2vw;
+    top : 3vw;
 }
 .right{
     right : 3vw;
-    top: 2vw;
+    top: 3vw;
 }
 .aside img{
-    width: 7vw;
-    height: 5.5vw;
+    width: 70%;
+    height: auto;
+    padding: 2px;
 }
 .text{
     font-size: 20px;
     color:goldenrod;
-
 }
 
 button{
