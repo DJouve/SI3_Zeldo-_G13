@@ -39,15 +39,6 @@ class Monster {
 
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
-        // Gestion attaque
-        if ((isAttackingTop == true) && (allMonsters[i].style.top - playerTop < 10) && (rapportLeft >= -10) && (rapportLeft <= 10)){
-            this.div.monsterLife -= 2
-
-            if (this.div.monsterLife <= 0){
-                allMonsters.splice(i,1)
-                death()
-            }
-        }
         // Gestion déplacement des monstres
         let rapportLeft = parseInt(allMonsters[i].div.style.left) - playerLeft
         let rapportTop = parseInt(allMonsters[i].div.style.top) - playerTop
