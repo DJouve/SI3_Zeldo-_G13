@@ -144,7 +144,6 @@ function animate(e){
         for (var i = 0; i < allMonsters.length; i++) {
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= 0){
                 allMonsters[i].monsterLife -= 2
-                console.log("aïe")
                 if (allMonsters[i].monsterLife <= 0){
                     allMonsters[i].death(plateau)
                     allMonsters.splice(i,1)
@@ -163,11 +162,11 @@ function animate(e){
             }, 120 *  fightSprite)
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/leftw0.png')"
-                isAttackingLeft = false
+                isAttacking = false
             },600)
         }
-    }
 
+}
     // Gestion dégats
     for (var i = 0; i < allMonsters.length; i++) {
         if (allMonsters[i].rapportLeft >= 0 && allMonsters[i].rapportLeft <= 5 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= -3){
