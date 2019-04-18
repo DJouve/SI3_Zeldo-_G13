@@ -158,7 +158,7 @@ img.headerItem {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translate(-50%, -100%);
+    transform: translate(-25%,-100%);
 }
 .aside{
     position: absolute;
@@ -203,6 +203,7 @@ img.headerItem {
     font-size: 1.7vw;
     height: auto;
     padding: 12px;
+    opacity: 80%;
 }
 .text{
     font-size: 1.38vw;
