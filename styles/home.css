@@ -1,6 +1,5 @@
 body{
   background-color: #FBEDC1;
-  position:absolute;
 }
 
 
@@ -134,7 +133,6 @@ div.description {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .cartridge{
