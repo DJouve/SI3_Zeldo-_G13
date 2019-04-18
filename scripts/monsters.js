@@ -6,7 +6,7 @@ let counter = 0
 let button = document.querySelector("button")
 let spriteNumberBoss = 0
 let playerLife = 6
-let damage = 0.5
+let damage = 0.1
 let audio = document.querySelector("audio")
 
 function hide(){
@@ -14,7 +14,7 @@ function hide(){
 }
 
 function animateBoss(){
-    monster.div.style.backgroundImage = "url('../images/bossw"+spriteNumberBoss+".png')"
+    allMonsters[0].div.style.backgroundImage = "url('../images/bossw"+spriteNumberBoss+".png')"
     spriteNumberBoss++
     spriteNumberBoss = spriteNumberBoss % 2
 }
@@ -58,40 +58,52 @@ class Monster {
         return parseInt(this.div.style.top) - playerTop
     }
     monsterAttack(){
-        for (let icount = 0; count < 4; i++) {
-            this.div.style.backgroundImage = "url('../images/backw"+count+".png')"
+
+        playerLife -= damage
+        if(playerLife <= 0){
+            player.style.backgroundImage = "url('../images/stunned.png')"
         }
 
-        if (rapportTop<3 && rapportLeft<3){
-            monsterAttack()
-            playerLife -= damage
-            if(playerLife <= 0){
-                player.style.backgroundImage = "url('../images/stunned.png')"
-
-            }
-        }
     }
+
 }
+
+class Boss extends Monster {
+
+    get rapportLeft(){
+        return parseInt(this.div.style.left) - playerLeft
+    }
+    get rapportTop(){
+        return parseInt(this.div.style.top) - playerTop
+    }
+
+}
+
 
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
         // Gestion déplacement des monstres
-        let rapportLeft = parseInt(allMonsters[i].div.style.left) - playerLeft
+        let
+         = parseInt(allMonsters[i].div.style.left) - playerLeft
         let rapportTop = parseInt(allMonsters[i].div.style.top) - playerTop
         // Tu check position relative du monstre par rapport au perso
-        if (rapportTop > 0) {
+        if (allMonsters[i].rapportTop > 0) {
             allMonsters[i].moveUp()
         }
-        if (rapportTop < 0) {
+        if (allMonsters[i].rapportTop < 0) {
             allMonsters[i].moveDown()
         }
-        if (rapportLeft > 0) {
+        if (allMonsters[i].rapportLeft > 0) {
             allMonsters[i].moveLeft()
         }
-        if (rapportLeft  < 0) {
+        if (allMonsters[i].rapportLeft  < 0) {
             allMonsters[i].moveRight()
-            }
         }
+        if (allMonsters[i].rapportTop<1 && allMonsters[i].rapportLeft<1){
+            allMonsters[i].monsterAttack()
+        }
+    }
+    console.log(playerLife)
 },600)
 
 
@@ -103,7 +115,7 @@ function spawn(spawnNumber){
 }
 function spawnBoss(spawnNumber){
     for (let i = 0; i < spawnNumber; i++) {
-        let newMonster = new Monster(document.querySelector('.plateau'), 24)
+        let newMonster = new Boss(document.querySelector('.plateau'), 24)
         newMonster.div.classList.add('boss')
         allMonsters.push(newMonster)
         monstersStep = 1.2
@@ -120,7 +132,7 @@ function resetLonk(){
 }
 function init(e){
     button.blur()
-    game1 ()
+    game1()
     resetLonk()
     audio.play()
 }
@@ -143,9 +155,4 @@ function game3(){// Fonction du niveau 3
 }
 function boss() {
     spawnBoss(1)
-
-    setInterval(function(){
-        animateBoss()
-
-    },1000)
 }
