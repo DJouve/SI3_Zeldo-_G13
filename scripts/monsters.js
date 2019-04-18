@@ -87,6 +87,7 @@ function spawnBoss(spawnNumber){
         let newMonster = new Monster(document.querySelector('.plateau'), 40)
         newMonster.div.classList.add('boss')
         allMonsters.push(newMonster)
+        monstersStep = 1.2
     }
 }
 

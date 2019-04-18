@@ -12,7 +12,7 @@ body{
     margin: 0 auto;
     position: relative;
     display: flex;
-    
+
 }
 .game{
     margin: 0 auto;
@@ -54,12 +54,20 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-
+.boss{
+    width: 18vw;
+    height: 18vw;
+    background-image: url("../images/bossw0.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 100%;
+}
 .aside{
     position: absolute;
     width: 12.6vw;
     height: 40vw  ;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 9px;
     padding: 1.2vw;
     color: white;
