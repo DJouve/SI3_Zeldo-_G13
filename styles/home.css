@@ -6,8 +6,8 @@ body{
 
 #topLeft {
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  top: 0;
   left: 0;
   height: 96px;
   z-index:3;
@@ -15,7 +15,7 @@ body{
 
 #topRight {
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
+  position: fixed;
   top: 0;
   right: 0;
   height: 96px;
@@ -24,7 +24,7 @@ body{
 
 #bottomLeft {
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 90px;
@@ -33,7 +33,7 @@ body{
 
 #bottomRight {
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
+  position: fixed;
   bottom: 0;
   right: 0;
   height: 90px;
@@ -42,23 +42,23 @@ body{
 .footer {
   overflow: hidden;
   background-image: url('../images/footer.png');
-  position: fixed; /* Set the navbar to fixed position */
-  bottom: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  bottom: 0;
   height: 90px;
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 .navbar {
   overflow: hidden;
   background-image: url('../images/Navbar.png');
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  top: 0;
   height: 96px;
-  width: 100%; /* Full width */
+  width: 100%;
   z-index: 2;
 }
 
-/* Links inside the navbar */
+
 .navbar li {
 
   color: #f2f2f2;
@@ -68,13 +68,19 @@ body{
   padding-left: 30px;
   text-decoration: none;
 }
-
-ul {
+ul.menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   list-style:none;
+}
+
+ul.links   {
+  display: flex;
+  flex-direction: row;
+  list-style:none;
+  justify-content: flex-start;
 }
 
 main {
@@ -107,7 +113,6 @@ img.headerItem {
   -webkit-transition: margin 0.4s ease-out;
   -moz-transition: margin 0.4s ease-out;
   -o-transition: margin 0.4s ease-out;
-
 }
 
 .navbar img:hover {
@@ -129,7 +134,6 @@ div.description {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: space-between;
 
 }
 
@@ -187,10 +191,18 @@ table{
   width: 700px;
 }
 
-.footerItem{
-  width: 40px;
-  height: 40px;
+.footer li{
+  margin-left: 30px;
 }
-footer li{
-  margin: 0 100px;
+
+img.footerItem {
+  width: 38px;
+  margin-top: 0px;
+  -webkit-transition: margin 0.4s ease-out;
+  -moz-transition: margin 0.4s ease-out;
+  -o-transition: margin 0.4s ease-out;
+}
+
+.footer img:hover {
+  margin-top: 15px;
 }
