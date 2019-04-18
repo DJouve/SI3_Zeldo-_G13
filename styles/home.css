@@ -137,7 +137,10 @@ div.description {
 position:relative;
 display: block;
 }
-
+.rokkitt{
+  font-family: 'Rokkitt', serif;
+  font-size: 18px;
+}
 .text {
     margin-right: 40px;
     width: 60%;
@@ -185,4 +188,10 @@ display: block;
 table{
   margin: 0 265px;
   width: 700px;
+}
+table td{
+  font-family: 'Rokkitt', serif;
+}
+table th{
+  font-family: 'Rokkitt', serif;
 }

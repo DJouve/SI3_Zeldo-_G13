@@ -63,7 +63,7 @@ body{
     border-radius: 9px;
     padding: 1.2vw;
     color: white;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Rokkitt', serif;
     text-align: center;
 }
 .left{
@@ -95,12 +95,12 @@ body{
     border-radius: 60px;
     background-image : radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
     width: 100%;
-    font-size: 1.6vw;
+    font-size: 1.7vw;
     height: auto;
     padding: 12px;
 }
 .text{
-    font-size: 1.3vw;
+    font-size: 1.38vw;
     color:goldenrod;
 
 }
