@@ -87,6 +87,8 @@ function resetLonk(){
     playerTop = 32
     player.style.left = playerLeft + "vw"
     player.style.top = playerTop + "vw"
+    player.style.backgroundImage = "url('images/backw0.png')"
+
 }
 function init(e){
     button.blur()
