@@ -3,7 +3,7 @@ const player = document.querySelector(".player")
 let plateau = document.querySelector(".plateau")
 let playerLeft = 22.4
 let playerTop = 32
-let step = 0.8
+let step = 1
 let spriteNumber = 0
 let spriteGrad = 0
 let fightSprite = 0
@@ -162,16 +162,16 @@ function animate(e){
                 isAttacking = false
             },600)
         }
+    }
         // Gestion dégats
         for (var i = 0; i < allMonsters.length; i++) {
-            if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 3 && allMonsters[i].rapportTop >= 0){
+            if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 0 && allMonsters[i].rapportTop >= 5){
                 allMonsters[i].monsterLife -= 2
                 if (allMonsters[i].monsterLife <= 0){
                     allMonsters[i].death(plateau)
                     allMonsters.splice(i,1)
                     // Vérifier si il y a encore des monstres
                 }
-            }
         }
     }
     if(e.keyCode == 32 && leftSide == true && !isAttacking){
@@ -199,6 +199,6 @@ function animate(e){
                 // Vérifier si il y a encore des monstres
             }
         }
+        }
     }
-}
 }

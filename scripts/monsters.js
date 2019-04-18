@@ -1,12 +1,13 @@
 let allMonsters = []
 let spawnNumber = 4
 let monsters = document.querySelector(".monsters")
-let monstersStep = 0.8
+let monstersStep = 0.6
 let counter = 0
 let button = document.querySelector("button")
 function hide(){
     button.classList.add('hide')
 }
+
 
 
 class Monster {
@@ -68,7 +69,7 @@ setInterval(function(){
             allMonsters[i].moveRight()
             }
         }
-},1000)
+},600)
 
 
 function spawn(spawnNumber){
