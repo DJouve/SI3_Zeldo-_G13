@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to left top, #686233, #575632, #474a30, #3a3d2e, #2f312b);
+  background-color: #FBEDC1;
     overflow: hidden;
     height: 100%;
 }
@@ -155,12 +155,14 @@ img.headerItem {
 .aside{
     position: absolute;
     width: 12.6vw;
-    height: 30vw  ;
-    background-color: rgba(0,0,0,0.4);
+    height: 33vw  ;
+    background-color: #D17B4F;
     border-radius: 9px;
     padding: 1.2vw;
     color: white;
-    font-family: 'Rokkitt', serif;
+    font-family: ReturnofGanon;
+    font-size: 50px;
+    line-height: normal;
     text-align: center;
 }
 .left{
@@ -172,7 +174,7 @@ img.headerItem {
     top: 10.5vw;
 }
 .aside h2{
-    font-size: 22px;
+    font-size: 1.8vw;
 }
 .aside img{
     width: 70%;
@@ -185,20 +187,10 @@ img.headerItem {
 .aside p{
     padding: 10px;
 }
-.aside a{
-    text-decoration: none;
-    color: white;
-    border: 4px solid white;
-    border-radius: 60px;
-    background-image : radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
-    width: 100%;
-    font-size: 1.7vw;
-    height: auto;
-    padding: 12px;
-}
+
 .text{
     font-size: 1.38vw;
-    color:goldenrod;
+    color: #000;
 
 }
 div.text strong{
@@ -210,21 +202,34 @@ div img.logozeldo{
     height: auto;
 }
 
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 button{
-    height: 5vw;
-    width: 17vw;
-    background-image: radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
-    position:absolute;
+  margin-top: 25%;
+    height: 133px;
+    width: 476px;
+    background-image: url('../images/button.png');
     z-index: 10;
-    border-radius: 60px;
-    font-size: 1.6vw;
+    position: absolute;
+    font-family: ReturnofGanon;
+    font-size: 30px;
     color: white;
-    left: 15vw;
-    top: 10vw;
-    border: 4px solid white;
+    border: 0px;
     opacity: 0.8;
 
 }
 .hide{
     display: none;
+}
+
+@font-face {
+  font-family: 'ReturnofGanon';
+  src:
+	url('../fonts/ReturnofGanon.ttf')
+	format('truetype');
 }

@@ -95,6 +95,7 @@ h2{
 text-align:center;
 font-family: Triforce;
 font-size: 60px;
+font-weight: normal;
 color: #D17B4F;
 }
 
@@ -149,15 +150,21 @@ display: block;
     text-align: justify;
     color: #000000;
   }
-.rokkitt
+.font
 {
-  font-family: 'Rokkitt', serif;
+  font-family: ReturnofGanon;
+  font-size: 25px;
+  line-height: normal;
+  text-align: center;
+  color: #000000;;
 }
-table th{
-  font-family: 'Rokkitt', serif;
-}
+
 table td{
-  font-family: 'Rokkitt', serif;
+  font-family: ReturnofGanon;
+  font-size: 25px;
+  line-height: normal;
+  text-align: center;
+  color: #000000;
 }
 .video{
   width: 100%;
