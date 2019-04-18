@@ -141,6 +141,18 @@ function animate(e){
             setTimeout(function() {
                 player.style.backgroundImage = "url('images/backw0.png')"
             },600)
+            // Gestion dégats
+            for (var i = 0; i < allMonsters.length; i++) {
+                if ((isAttackingTop == true) && (allMonsters[i].div.style.top - playerTop < 40) && (rapportLeft >= -40) && (rapportLeft <= 10)){
+                    allMonsters[i].div.monsterLife -= 2
+                    console.log("aïe")
+
+                    if (allMonsters[i].div.monsterLife <= 0){
+                        allMonsters.splice(i,1)
+                        death()
+                    }
+                }
+            }
             isAttackingTop = false
         }
     }
