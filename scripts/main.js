@@ -3,7 +3,7 @@ const player = document.querySelector(".player")
 let plateau = document.querySelector(".plateau")
 let playerLeft = 22.4
 let playerTop = 32
-let step = 1
+let step = 0.8
 let spriteNumber = 0
 let spriteGrad = 0
 let fightSprite = 0
@@ -68,7 +68,6 @@ function  verifMonstersAlive(monster,i){
 }
 document.onkeydown = animate
 function animate(e){
-    console.log(playerLife)
     if(e.keyCode == 39){
         if(playerLeft + step < 47){
             playerLeft += step
@@ -187,7 +186,11 @@ function animate(e){
 
         
         for (var i = 0; i < allMonsters.length; i++) {
+            console.log('------------')
+            console.log("allMonsters[i].rapportLeft : " + allMonsters[i].rapportLeft)
+            console.log("allMonsters[i].rapportTop : "+ allMonsters[i].rapportTop)
             if (allMonsters[i].rapportLeft >= -3 && allMonsters[i].rapportLeft <= 3 && allMonsters[i].rapportTop < 0 && allMonsters[i].rapportTop >= -5){
+                console.log("aie")
                 allMonsters[i].monsterLife -= 2
                 verifMonstersAlive(allMonsters[i],i)
             }
