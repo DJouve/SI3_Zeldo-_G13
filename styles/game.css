@@ -100,7 +100,7 @@ body{
     padding: 12px;
 }
 .text{
-    font-size: 20px;
+    font-size: 1.3vw;
     color:goldenrod;
 
 }
@@ -108,7 +108,7 @@ div.text strong{
     color: white;
 }
 div img.logozeldo{
-    margin-top: 7vw;
+    margin-top: 4vw;
     width: 12vw;
     height: auto;
 }
