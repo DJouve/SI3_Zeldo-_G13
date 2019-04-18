@@ -82,6 +82,9 @@ function damage(){
     }
 }
 
+
+
+
 function resetLonk(){
     playerLeft = 22.4
     playerTop = 32
@@ -107,12 +110,20 @@ function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
     // for (i = 0; i<allMonsters.length; i++){
     spawn()
     damage()
+    if (allMonsters.length < 1){
+        resetLonk()
+        game2()
+    }
 }
 function game2 (){ // Fonction pour lancer le premier niveau -> pop des monstres
     spawnNumber = 6
     // for (i = 0; i<allMonsters.length; i++){
     spawn()
     damage()
+    if (allMonsters.length < 1){
+        resetLonk()
+        game3()
+    }
 }
 function game3(){// Fonction du niveau 3
     spawnNumber = 10
