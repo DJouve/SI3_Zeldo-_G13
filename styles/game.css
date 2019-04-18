@@ -1,0 +1,132 @@
+body{
+    background-image: linear-gradient(to left top, #686233, #575632, #474a30, #3a3d2e, #2f312b);
+    overflow: hidden;
+    height: 100%;
+}
+
+
+
+.container{
+    width: 60vw;
+    height: 46.74vw;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.game{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top : 3vw;
+}
+.plateau{
+    width : 48vw;
+    height: 33.6vw;
+    /*border: 2px solid red;*/
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.player{
+    width: 3.8vw;
+    height: 3.8vw;
+    position: absolute;
+    background-image: url("../images/backw0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 22.4vw;
+    top: 32vw;
+}
+.plateau img{
+    width: 900px;
+    height: 600px;
+    background-size: cover;
+}
+
+.monster{
+    width: 4.2vw;
+    height: 4.2vw;
+    background-image:url("../images/monsterFacew0.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.aside{
+    position: absolute;
+    width: 12.6vw;
+    height: 40vw  ;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 9px;
+    padding: 1.2vw;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+}
+.left{
+    left: 2.5vw;
+    top : 3.5vw;
+}
+.right{
+    right : 3vw;
+    top: 3.5vw;
+}
+.aside h2{
+    font-size: 22px;
+}
+.aside img{
+    width: 70%;
+    height: auto;
+    padding: 7px;
+}
+.aside link{
+    margin-top: 10px;
+}
+.aside p{
+    padding: 10px;
+}
+.aside a{
+    text-decoration: none;
+    color: white;
+    border: 4px solid white;
+    border-radius: 60px;
+    background-image : radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
+    width: 100%;
+    font-size: 1.6vw;
+    height: auto;
+    padding: 12px;
+}
+.text{
+    font-size: 20px;
+    color:goldenrod;
+
+}
+div.text strong{
+    color: white;
+}
+div img.logozeldo{
+    margin-top: 7vw;
+    width: 12vw;
+    height: auto;
+}
+
+button{
+    height: 5vw;
+    width: 17vw;
+    background-image: radial-gradient(circle, #1d3b17, #385421, #576d2b, #7a8735, #a2a040);
+    position:absolute;
+    z-index: 10;
+    border-radius: 60px;
+    font-size: 1.6vw;
+    color: white;
+    left: 15vw;
+    top: 10vw;
+    border: 4px solid white;
+
+}
+.hide{
+    display: none;
+}
