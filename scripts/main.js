@@ -48,7 +48,7 @@ function  verifMonstersAlive(monster,i){
     if (monster.monsterLife <= 0){
         monster.death(plateau)
         allMonsters.splice(i,1)
-        // Vérifier si il y a encore des monstres
+        
         if (allMonsters.length == 0) {
             level++
             switch (level) {

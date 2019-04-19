@@ -84,11 +84,11 @@ class Boss extends Monster {
 
 setInterval(function(){
     for (let i = 0; i < allMonsters.length; i++) {
-        // Gestion déplacement des monstres
+        
         let
          = parseInt(allMonsters[i].div.style.left) - playerLeft
         let rapportTop = parseInt(allMonsters[i].div.style.top) - playerTop
-        // Tu check position relative du monstre par rapport au perso
+        
         if (allMonsters[i].rapportTop > 0) {
             allMonsters[i].moveUp()
         }
@@ -145,13 +145,13 @@ button.addEventListener('click',function(e) {
 })
 
 
-function game1 (){ // Fonction pour lancer le premier niveau -> pop des monstres
+function game1 (){ 
     spawn(4)
 }
-function game2 (){ // Fonction pour lancer le premier niveau -> pop des monstres
+function game2 (){ 
     spawn(6)
 }
-function game3(){// Fonction du niveau 3
+function game3(){
     spawn(10)
 }
 function boss() {
