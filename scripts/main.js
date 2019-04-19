@@ -40,8 +40,9 @@ function morphleft(){
     spriteGrad =  spriteGrad % 6
 }
 function clear(){
-    let title = document.createElement('h2')
-    container.appendChild(title)
+    let titlewin = document.createElement('h2')
+    titlewin.innerHTML("Félicitation !")
+    container.appendChild(titlewin)
 }
 function  verifMonstersAlive(monster,i){
     if (monster.monsterLife <= 0){
