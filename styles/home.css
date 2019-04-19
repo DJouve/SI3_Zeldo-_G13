@@ -99,6 +99,31 @@ font-weight: normal;
 color: #D17B4F;
 }
 
+.cartridge a{
+text-align:center;
+font-family: ReturnofGanon;
+font-size: 20px;
+font-weight: normal;
+color: #73966D;
+text-decoration:none;
+}
+
+#listcommands{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style:none;
+}
+
+#commands{
+  position: absolute;
+  margin-top: 11%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
 img.lonk {
   width: 32px;
   margin: 15px;
